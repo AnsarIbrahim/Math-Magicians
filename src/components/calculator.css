@@ -1,0 +1,47 @@
+.calculator {
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.display {
+  background-color: grey;
+  padding: 10px;
+}
+
+.input-display {
+  width: 100%;
+  border: none;
+  background-color: grey;
+  color: #fff;
+  font-size: 24px;
+  text-align: right;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.key {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #ccc;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.key-light-grey {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.key-red {
+  background-color: rgba(230, 64, 4, 0.856);
+  color: #fff;
+}
+
+.key-0 {
+  grid-column: span 2;
+}
