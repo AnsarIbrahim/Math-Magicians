@@ -1,12 +1,6 @@
 import React from 'react';
-import Calculator from './components/calculator';
-import Quote from './components/Quote';
+import LinkRouter from './components/Route';
 
-const App = () => (
-  <div className="App">
-    <Calculator />
-    <Quote />
-  </div>
-);
+const App = () => <LinkRouter />;
 
 export default App;
