@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.438);
+  height: 5vh;
+  position: fixed;
+  left: 50%;
+  top: 96%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,31 @@
+.home-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  height: 80vh;
+}
+
+.head {
+  float: left;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.para {
+  font-style: italic;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+  .home-contain {
+    margin: -10% auto;
+  }
+
+  .para {
+    overflow-y: scroll;
+    height: 60%;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './calculator.css';
+import '../styles/quote.css';
 
 const Quote = () => {
   const [quote, setQuote] = useState({});
@@ -32,11 +32,11 @@ const Quote = () => {
   }, []);
 
   if (isLoading) {
-    return <p className="quote">Loading...</p>;
+    return <p className="quote-load">Loading...</p>;
   }
 
   if (error) {
-    return <p className="quote">{error}</p>;
+    return <p className="quote-error">{error}</p>;
   }
 
   return (
@@ -45,7 +45,7 @@ const Quote = () => {
         {quote.quote}
         {' '}
         -
-        {quote.author}
+        <span className="author">{quote.author}</span>
       </p>
     </div>
   );

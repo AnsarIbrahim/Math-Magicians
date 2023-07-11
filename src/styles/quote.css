@@ -1,0 +1,28 @@
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 80%;
+  margin: auto;
+  font-size: large;
+}
+
+.quote-load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+
+.quote-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+
+.author {
+  color: blue;
+  font-weight: bold;
+}
