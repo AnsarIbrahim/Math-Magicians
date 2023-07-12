@@ -77,7 +77,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](Coming Soon...)
+- [Live Demo Link](https://ansaribrahim.github.io/Math-Magicians/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
