@@ -19,13 +19,12 @@ describe('Quote', () => {
   it('renders the quote correctly', async () => {
     const mockResponse = {
       ok: true,
-      json: () =>
-        Promise.resolve([
-          {
-            quote: 'This is a test quote',
-            author: 'Test Author',
-          },
-        ]),
+      json: () => Promise.resolve([
+        {
+          quote: 'This is a test quote',
+          author: 'Test Author',
+        },
+      ]),
     };
     jest.spyOn(window, 'fetch').mockResolvedValueOnce(mockResponse);
     render(<Quote />);
