@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import '../styles/quote.css';
 
 const Quote = () => {
   const [quote, setQuote] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
-
   useEffect(() => {
     const fetchQuote = async () => {
       try {
@@ -16,29 +14,27 @@ const Quote = () => {
         const headers = {
           'X-Api-Key': apiKey,
         };
-        const response = await axios.get(
-          `https://api.api-ninjas.com/v1/quotes?category=${category}`,
-          { headers },
-        );
-        setQuote(response.data[0]);
+        const url = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+        const response = await fetch(url, { headers });
+        if (!response.ok) {
+          throw new Error('Error fetching the quote');
+        }
+        const data = await response.json();
+        setQuote(data[0]);
         setIsLoading(false);
       } catch (error) {
         setError('Error fetching the quote');
         setIsLoading(false);
       }
     };
-
     fetchQuote();
   }, []);
-
   if (isLoading) {
     return <p className="quote-load">Loading...</p>;
   }
-
   if (error) {
     return <p className="quote-error">{error}</p>;
   }
-
   return (
     <div className="quote">
       <p>
@@ -50,5 +46,4 @@ const Quote = () => {
     </div>
   );
 };
-
 export default Quote;
