@@ -35,4 +35,17 @@ describe('calculate', () => {
     const result = calculate({ total: '10', next: '5', operation: '+' }, '-');
     expect(result).toEqual({ total: '15', next: null, operation: '-' });
   });
+
+  it('handles decimal points correctly in the total', () => {
+    const result = calculate({ total: '10.5', next: '5', operation: '+' }, '=');
+    expect(result).toEqual({ total: '15.5', next: null, operation: null });
+  });
+
+  it('handles decimal numbers in the total', () => {
+    const result = calculate(
+      { total: '0.5', next: '0.1', operation: 'x' },
+      '=',
+    );
+    expect(result).toEqual({ total: '0.05', next: null, operation: null });
+  });
 });
